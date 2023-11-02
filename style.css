@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333333ff;
+}
+
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #333333ff;
+    color: #d35500ff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    top: 2;
+    left: 1;
+    z-index: 2;
+}
+
+#logo {
+    width: 295px; /* Set the desired width */
+    height: auto; /* Let the browser maintain the aspect ratio */
+}
+
+
+
+.header {
+    position: relative;
+    z-index: 1;
+    padding: 25px; /* Add padding to make room for the logo */
+}
+
+header:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #a02c2cff; /* Set line color and thickness */
+    margin-top: 5px; /* Adjust the margin as needed */
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    grid-area: title; /* Place the h2 in the 'title' area */
+    text-align: center; /* Center the h2 */
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+p {
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px; /* Adjust the spacing between menu items */
+}
+
+nav {
+    background-color: #333333ff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d35500ff;
+}
+
+nav a:hover {
+    color: #ffffff; /* Change to your preferred hover color */
+}
+
+#about-link a {
+    display: inline-flex;
+}
+
+#about-link a:hover {
+    color: inline; /* Hide the text by making it transparent */
+}
+
+#about-link:hover a::before {
+    content: url('about\ white.svg'); /* Replace 'your-icon.svg' with the path to your SVG file */
+    display: inline; /* Show the SVG icon */
+    width: 20px; /* Adjust the width of the SVG icon as needed */
+    height: 20px; /* Adjust the height of the SVG icon as needed */
+    margin-right: 5px; /* Add space between the icon and text */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next line if needed */
+    gap: 10px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+#about-image {
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.3s;
+}
+
+#about-image.blurred {
+    filter: blur(5px); /* Apply a blur effect by default */
+}
+
+#about-image:hover {
+    filter: blur(0); /* Remove the blur effect on hover */
+}
+
+#projects-link a {
+    display: inline-flex;
+
+}
+
+#projects-link a:hover {
+    color: inline; /* Hide the text by making it transparent */
+}
+
+
+#projects-link:hover a::before {
+    content: url('whitety.svg'); /* Replace 'your-icon.svg' with the path to your SVG file */
+    display: inline; /* Show the SVG icon */
+    width: 20px; /* Adjust the width of the SVG icon as needed */
+    height: 20px; /* Adjust the height of the SVG icon as needed */
+    margin-right: 5px; /* Add space between the icon and text */
+}
+
+.project {
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #d35500ff;
+    border-radius: 5px;
+    background-color: #333333ff;
+    color: white;
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    max-height: 150px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.5); /* Increase the size on hover (adjust the scale factor as needed) */
+}
+
+#contact-link a {
+    display: inline-flex;
+
+}
+
+#contact-link a:hover {
+    color: inline; /* Hide the text by making it transparent */
+}
+
+#contact-link:hover a::before {
+    content: url('tepe\ white.png'); /* Replace 'your-icon.svg' with the path to your SVG file */
+    display: inline; /* Show the SVG icon */
+    width: 20px; /* Adjust the width of the SVG icon as needed */
+    height: 20px; /* Adjust the height of the SVG icon as needed */
+    margin-right: 5px; /* Add space between the icon and text */
+}
+
+section {
+    background-color: rgba(211, 84, 0, 0.61);
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid rgb(19, 17, 17);
+    border-radius: 5px;
+    color: white;
+}
+
+.contact-item {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the items */
+    margin-bottom: 10px; /* Add spacing between items */
+}
+
+.social-icon {
+    width: 40px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between the icon and the text */
+}
+
+.contact-item p {
+    font-size: 16px; /* Style the text as needed */
+    margin: 0; /* Remove any default margin */
+}
+
+.project {
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+/* You can add more styles and customize the colors and fonts as needed */
