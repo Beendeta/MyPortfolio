@@ -18,6 +18,17 @@ header {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .logo {
+        position: static; /* Reset the logo's position to the default static positioning */
+        margin: 10px; /* Add some margin to create spacing between the logo and the content */
+    }
+
+    .header {
+        padding-left: 50px; /* Add left padding to the header to create space for the logo */
+    }
+}
+
 .logo {
     position: absolute;
     top: 2;
