@@ -245,6 +245,13 @@ section {
     transform: scale(1.5);
 }
 
+.project #project4-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project #project4-image:hover {
+    transform: scale(1.5);
+}
 
 h2 {
     font-size: 24px;
