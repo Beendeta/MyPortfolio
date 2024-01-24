@@ -1,41 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Javascript Sample</title>
-    <link rel="stylesheet" type="text/css" href="dogyears_styles.css"> <!-- Link to your CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Age Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
-    <!-- Link to a Google Font (change the font name as needed) -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Include a mobile-friendly font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <script type="text/javascript" src="dogyears_codex.js"></script>
+    <script type="text/javascript" src="codex.js"></script>
 </head>
 
 <body>
-    <b>Find out your age in dog years!</b>
-    <form method="post">
+    <div class="container">
+        <h1>Dog Age Calculator</h1>
+        <p>Find out your age in dog years!</p>
 
-        <table>
+        <form method="post">
+            <label for="myage">Enter your Age:</label>
+            <input type="text" id="myage" name="myage" placeholder="Your age" required>
 
-            <tr>
-                <td>Enter your Age:</td>
-                <td><input type="text" name="myage" size=15></td>
-            </tr>
+            <button type="button" onclick="calculateDogAge()">Calculate</button>
 
-            <tr>
-                <td>
-                    <input type="button" value="Calculate" onclick="cyears(this.form)">
-                </td>
-            </tr>
-
-            <tr>
-
-                <td>Your age in Dog Years is</td>
-                <td><input type="text" name="dogage" size=15></td>
-
-            </tr>
-        </table>
-    </form>
+            <p>Your age in Dog Years is: <span id="dogage">0</span></p>
+        </form>
+    </div>
 </body>
 
 </html>
