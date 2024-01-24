@@ -14,19 +14,28 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Dog Age Calculator</h1>
-        <p>Find out your age in dog years!</p>
+     <b>Find out your age in dog years!</b>
+    <form method="post">
 
-        <form method="post">
-            <label for="myage">Enter your Age:</label>
-            <input type="text" id="myage" name="myage" placeholder="Your age" required>
+        <table>
 
-            <button type="button" onclick="calculateDogAge()">Calculate</button>
+            <tr>
+                <td>Enter your Age:</td>
+                <td><input type="text" name="myage" size=15></td>
+            </tr>
 
-            <p>Your age in Dog Years is: <span id="dogage">0</span></p>
-        </form>
-    </div>
+            <tr>
+                <td>
+                    <input type="button" value="Calculate" onclick="cyears(this.form)">
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>Your age in Dog Years is</td>
+                <td><input type="text" name="dogage" size=15></td>
+
+            </tr>
 </body>
 
 </html>
