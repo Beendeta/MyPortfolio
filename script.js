@@ -5,6 +5,9 @@ images.forEach((image) => {
     image.addEventListener("click", openLightbox);
 });
 
+const project3Link = document.querySelector("#project3-link");
+project3Link.addEventListener("click", openDogYearsPage);
+
 function openLightbox(event) {
     const lightbox = document.createElement("div");
     lightbox.className = "lightbox";
@@ -21,4 +24,9 @@ function closeLightbox(event) {
     if (event.target.className === "lightbox") {
         event.target.remove();
     }
+}
+
+function openDogYearsPage() {
+    // Open the Dog Years page in a new tab when the Project 3 image is clicked
+    window.open("dogyears.html", "_blank");
 }
