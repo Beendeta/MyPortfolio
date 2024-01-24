@@ -1,0 +1,39 @@
+body {
+    font-family: 'Open Sans', sans-serif; /* Use the Google Font you linked */
+    background-image: url('dog2.jpeg'); /* Set the path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 50px;
+    color: white; /* Adjust text color for better visibility on the background */
+}
+
+b {
+    color: #333;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 150px;
+}
+
+input[type="button"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;
+}
