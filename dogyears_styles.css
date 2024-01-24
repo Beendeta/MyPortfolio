@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url('your-background-image.jpg');
+    background-image: url('dog2.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -38,7 +38,7 @@ button {
     width: 100%;
 }
 
-button:hover {
+button: hover {
     background-color: #45a049;
 }
 
