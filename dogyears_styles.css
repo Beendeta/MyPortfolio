@@ -1,11 +1,11 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-image: url('dog2.jpeg');
+    font-family: 'Open Sans', sans-serif; /* Use the Google Font you linked */
+    background-image: url('dog2.jpeg'); /* Set the path to your background image */
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     margin: 50px;
-    color: white;
+    color: white; /* Adjust text color for better visibility on the background */
 }
 
 b {
@@ -36,11 +36,4 @@ input[type="button"] {
 
 input[type="button"]:hover {
     background-color: #45a049;
-}
-
-
-@media only screen and (min-width: 600px) {
-    body {
-        padding: 50px;
-    }
 }
