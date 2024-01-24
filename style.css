@@ -237,7 +237,6 @@ section {
     margin: 10px 0;
 }
 
-/* Add hover effect for Project 3 image */
 .project #project3-image {
     transition: transform 0.3s ease-in-out;
 }
