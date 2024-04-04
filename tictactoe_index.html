@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic Tac Toe</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #ff69b4, #1e90ff);
+    font-family: 'Comic Sans MS', cursive; /* Using Comic Sans MS for jolly font */
+  }
+
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .tic-tac-toe {
+    font-size: 36px;
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3); /* Colorful gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 600% 100%;
+    animation: rainbow-animation 10s infinite;
+  }
+
+  @keyframes rainbow-animation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  .board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px); /* Adjusted size for smaller screens */
+    grid-template-rows: repeat(3, 80px); /* Adjusted size for smaller screens */
+    gap: 2px;
+  }
+
+  .cell {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: cover;
+  }
+
+  .cell-x {
+    background-image: url('doggo.jpg'); /* Replace 'x.png' with the path to your X image */
+  }
+
+  .cell-o {
+    background-image: url('cat.jpg'); /* Replace 'o.png' with the path to your O image */
+  }
+</style>
+</head>
+<body>
+<div class="heading">
+  <h1 class="tic-tac-toe">TIC <span style="color: #ff69b4;">T</span><span style="color: #1e90ff;">A</span>C <span style="color: #ff69b4;">T</span><span style="color: #1e90ff;">O</span>E</h1>
+  <h2>2 players but if you are single you can play it solo with yourselves</h2>
+  <p>X = dog : O = cat</p>
+</div>
+
+<div class="board-container">
+  <div class="board" onclick="mark(event)">
+    <div class="cell" id="1"></div>
+    <div class="cell" id="2"></div>
+    <div class="cell" id="3"></div>
+    <div class="cell" id="4"></div>
+    <div class="cell" id="5"></div>
+    <div class="cell" id="6"></div>
+    <div class="cell" id="7"></div>
+    <div class="cell" id="8"></div>
+    <div class="cell" id="9"></div>
+  </div>
+</div>
+
+<script>
+  let currentPlayer = 'X';
+  let moves = 0;
+
+  function mark(event) {
+    const cell = event.target;
+    if (cell.classList.contains('cell') && !cell.classList.contains(`cell-${currentPlayer.toLowerCase()}`)) {
+      cell.textContent = ''; // Clear text content
+      cell.classList.add(`cell-${currentPlayer.toLowerCase()}`);
+      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      moves++;
+    }
+    checkWinner();
+  }
+
+  function checkWinner() {
+    const board = document.querySelectorAll('.cell');
+    const winConditions = [
+      [1, 2, 3], [4, 5, 6], [7, 8, 9], // Rows
+      [1, 4, 7], [2, 5, 8], [3, 6, 9], // Columns
+      [1, 5, 9], [3, 5, 7] // Diagonals
+    ];
+
+    for (let condition of winConditions) {
+      const [a, b, c] = condition;
+      if (board[a - 1].classList.contains('cell-x') && board[b - 1].classList.contains('cell-x') && board[c - 1].classList.contains('cell-x')) {
+        alert('X wins!');
+        resetBoard();
+        return;
+      } else if (board[a - 1].classList.contains('cell-o') && board[b - 1].classList.contains('cell-o') && board[c - 1].classList.contains('cell-o')) {
+        alert('O wins!');
+        resetBoard();
+        return;
+      }
+    }
+
+    if (moves === 9) {
+      alert("It's a draw!");
+      resetBoard();
+    }
+  }
+
+  function resetBoard() {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+      cell.classList.remove('cell-x', 'cell-o');
+    });
+    currentPlayer = 'X';
+    moves = 0;
+  }
+</script>
+</body>
+</html>
