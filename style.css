@@ -253,6 +253,14 @@ section {
     transform: scale(1.5);
 }
 
+.project #project5-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project #project5-image:hover {
+    transform: scale(1.5);
+}
+
 h2 {
     font-size: 24px;
 }
